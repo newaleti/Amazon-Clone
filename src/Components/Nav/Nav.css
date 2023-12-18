@@ -1,0 +1,28 @@
+.nav_wrapper {
+    background-color: #195851;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    z-index: 999;
+    height: 20px;
+    scroll-margin: 0;
+    box-sizing:content-box;
+}
+.clearLinkBorder {
+    text-decoration: none;
+}
+.clearLinkBorder:hover {
+    border: 1px solid white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* border-radius: 5px; */
+    cursor: pointer;
+}
+.navProgressiveAttribute {
+    color: white;
+    margin-right: 25px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+}

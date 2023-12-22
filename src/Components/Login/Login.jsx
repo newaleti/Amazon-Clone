@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 // import { register } from "numeral";
-import { auth } from "../../firbase";
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -13,29 +16,29 @@ function Login() {
   const signIn = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      if (userCredential) {
-        navigate("/")
-      }
-    })
-    .catch((error) => {
-      alert(error.message)
-    })
+      .then((userCredential) => {
+        if (userCredential) {
+          navigate("/");
+        }
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
 
   const register = (e) => {
-      e.preventDefault();
-      
+    e.preventDefault();
+
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         if (userCredential) {
           navigate("/");
         }
       })
-    .catch((error) => {
-      const errorMessage = error.message
-      alert(errorMessage)
-    })
+      .catch((error) => {
+        const errorMessage = error.message;
+        alert(errorMessage);
+      });
   };
 
   return (

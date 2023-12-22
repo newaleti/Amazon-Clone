@@ -8,9 +8,9 @@
 }
 
 .checkoutProduct__image{
-    /* width: 180px; */
+    width: 180px;
     object-fit: contain;
-    /* height: 180px; */
+    height: 180px;
 }
 
 .checkoutProduct__button{

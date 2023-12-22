@@ -1,14 +1,19 @@
 export const initialState = {
   basket: [],
+  user: null, // Add the user property to the initial state
 };
 
 const reducer = (state, action) => {
-  // console.log(action)
   switch (action.type) {
     case "ADD_TO_BASKET":
       return {
         ...state,
         basket: [...state.basket, action.item],
+      };
+    case "EMPTY_BASKET":
+      return {
+        ...state,
+        basket: [],
       };
     case "REMOVE_FROM_BASKET":
       const index = state.basket.findIndex(
@@ -20,7 +25,7 @@ const reducer = (state, action) => {
         newBasket.splice(index, 1);
       } else {
         console.warn(
-          `Can't remove product (id: ${action.id}) as it is not in basket!`
+          `Can't remove product (id: ${action.id}) as it is not in the basket!`
         );
       }
 
@@ -28,6 +33,13 @@ const reducer = (state, action) => {
         ...state,
         basket: newBasket,
       };
+
+    case "SET_USER": // Add a case for setting the user
+      return {
+        ...state,
+        user: action.user,
+      };
+
     default:
       return state;
   }

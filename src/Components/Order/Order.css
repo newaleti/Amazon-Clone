@@ -1,0 +1,27 @@
+.order {
+  padding: 20px;
+  margin: 20px auto; /* Adjusted margin for centering */
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 0 6px 18px -9px rgba(0, 0, 0, 0.75);
+  transition: transform 0.1s ease-in;
+  position: relative;
+  max-width: 800px; /* Adjusted maximum width */
+  width: 100%; /* Ensure it takes the full width of the container */
+}
+
+.order__id {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.order__total {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 20px; /* Added margin for spacing */
+  text-align: center; /* Center the text */
+}

@@ -1,4 +1,5 @@
 Overview
+
 Amazon Clone is a web application that replicates the functionality of the popular e-commerce platform Amazon. It is designed to provide users with a seamless and familiar shopping experience, user-friendly navigation, and a secure checkout process.
 
 

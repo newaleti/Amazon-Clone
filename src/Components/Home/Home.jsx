@@ -8,11 +8,6 @@ function Home() {
   return (
     <div className="home">
       <div className="home__container">
-        {/* <img
-          className="home__image"
-          src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/717RUPA1bDL._SX3000_.jpg"
-          alt=""
-        /> */}
         <Banner />
       </div>
       <div className="home__row">
